@@ -2,12 +2,14 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
 require('dotenv/config');
 //Importar Rutas
-const postsRoute = require('./routes/posts');
+const rutaPersonaje = require('./routes/personaje');
 
 //Middlewares
-app.use('/posts', postsRoute);
+app.use(bodyParser.json());  //Parser para asegurarse que toda la info este en formato JSON
+app.use('/personaje', rutaPersonaje);
 
 //RUTAS
 app.get('/', (req,res) => {
