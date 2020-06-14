@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
-const PostSchema = mongoose.Schema({
+const CharacterSchema = mongoose.Schema({
+    _id:String,
     name: String,
     gender: String,
     age: String,
@@ -14,4 +15,4 @@ const PostSchema = mongoose.Schema({
     isAlive: Boolean,
 });
 
-module.exports = mongoose.model('Personaje', PostSchema);
+module.exports = mongoose.model('Character', CharacterSchema);
