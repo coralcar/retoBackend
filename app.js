@@ -4,6 +4,9 @@ const app = express();
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 require('dotenv/config');
+
+let port = process.env.PORT || 5000;
+
 //Importar Rutas
 const charactersRoute = require('./routes/characters');
 const placesRoute = require('./routes/places');
@@ -28,4 +31,4 @@ mongoose.connect( process.env.DB_URL,
 );
 
 //Start listening to the server
-app.listen(5000);
+app.listen(port);
