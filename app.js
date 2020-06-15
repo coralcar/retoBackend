@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 require('dotenv/config');
 
-let port = process.env.PORT || 5000;
+var port = process.env.PORT || 5000;
 
 //Importar Rutas
 const charactersRoute = require('./routes/characters');
